@@ -26,4 +26,9 @@
 	return YES;
 }
 
+
+- (NSString *) predicate {
+	return @"";
+}
+
 @end

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Roaring Sky. All rights reserved.
 //
 
-#import <RSTrixiePlugin/RSTrixiePlugin.h>
+#import <RSTrixiePlugin/RSConditionPlugin.h>
 
-@interface ConditionStatus : RSTrixiePlugin
+@interface ConditionStatus : RSConditionPlugin
 
 @property (retain) IBOutlet NSPopUpButton * statusMenu;
 

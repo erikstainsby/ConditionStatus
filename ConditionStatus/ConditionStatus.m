@@ -17,18 +17,17 @@
 	
     if( nil != (self = [super initWithNibName:nibNameOrNil	bundle:nibBundleOrNil]))
     {
-		[self setName: @"Status"];
+		[self setPluginName: @"Status"];
     }
     return self;
 }
 
-- (BOOL) hasSelectorField {
-	return YES;
+- (NSString *) predicate {
+	return [[[self statusMenu] titleOfSelectedItem] lowercaseString];
 }
 
-
-- (NSString *) predicate {
-	return @"";
+- (NSString *) expression {
+	return [NSString stringWithFormat:@".('%@').%@()", [self selectorField],[self predicate]];
 }
 
 @end

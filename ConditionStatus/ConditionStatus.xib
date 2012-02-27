@@ -48,7 +48,6 @@
 						<string key="NSFrame">{{102, 7}, {124, 26}}</string>
 						<reference key="NSSuperview" ref="25853209"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSPopUpButtonCell" key="NSCell" id="651651756">
@@ -67,28 +66,29 @@
 							<string key="NSKeyEquivalent"/>
 							<int key="NSPeriodicDelay">400</int>
 							<int key="NSPeriodicInterval">75</int>
-							<nil key="NSMenuItem"/>
+							<object class="NSMenuItem" key="NSMenuItem" id="1010602291">
+								<reference key="NSMenu" ref="1068323989"/>
+								<string key="NSTitle">Checked</string>
+								<string key="NSKeyEquiv"/>
+								<int key="NSKeyEquivModMask">1048576</int>
+								<int key="NSMnemonicLoc">2147483647</int>
+								<int key="NSState">1</int>
+								<object class="NSCustomResource" key="NSOnImage" id="411881370">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">NSMenuCheckmark</string>
+								</object>
+								<object class="NSCustomResource" key="NSMixedImage" id="843459901">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">NSMenuMixedState</string>
+								</object>
+								<string key="NSAction">_popUpItemAction:</string>
+								<reference key="NSTarget" ref="651651756"/>
+							</object>
 							<bool key="NSMenuItemRespectAlignment">YES</bool>
 							<object class="NSMenu" key="NSMenu" id="1068323989">
 								<string key="NSTitle">OtherViews</string>
 								<array class="NSMutableArray" key="NSMenuItems">
-									<object class="NSMenuItem" id="1010602291">
-										<reference key="NSMenu" ref="1068323989"/>
-										<string key="NSTitle">Checked</string>
-										<string key="NSKeyEquiv"/>
-										<int key="NSKeyEquivModMask">1048576</int>
-										<int key="NSMnemonicLoc">2147483647</int>
-										<object class="NSCustomResource" key="NSOnImage" id="411881370">
-											<string key="NSClassName">NSImage</string>
-											<string key="NSResourceName">NSMenuCheckmark</string>
-										</object>
-										<object class="NSCustomResource" key="NSMixedImage" id="843459901">
-											<string key="NSClassName">NSImage</string>
-											<string key="NSResourceName">NSMenuMixedState</string>
-										</object>
-										<string key="NSAction">_popUpItemAction:</string>
-										<reference key="NSTarget" ref="651651756"/>
-									</object>
+									<reference ref="1010602291"/>
 									<object class="NSMenuItem" id="679225835">
 										<reference key="NSMenu" ref="1068323989"/>
 										<string key="NSTitle">Disabled</string>
@@ -149,6 +149,7 @@
 						<string key="NSFrame">{{5, 14}, {50, 17}}</string>
 						<reference key="NSSuperview" ref="25853209"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="231012349"/>
 						<string key="NSReuseIdentifierKey">_NS:3944</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="668443794">
@@ -181,7 +182,7 @@
 					<object class="NSTextField" id="650869219">
 						<reference key="NSNextResponder" ref="25853209"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{5, 42}, {79, 17}}</string>
+						<string key="NSFrame">{{5, 42}, {55, 17}}</string>
 						<reference key="NSSuperview" ref="25853209"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="30407622"/>
@@ -190,7 +191,7 @@
 						<object class="NSTextFieldCell" key="NSCell" id="632739594">
 							<int key="NSCellFlags">68288064</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">For element</string>
+							<string key="NSContents">Element</string>
 							<reference key="NSSupport" ref="905947302"/>
 							<string key="NSCellIdentifier">_NS:3944</string>
 							<reference key="NSControlView" ref="650869219"/>
@@ -204,7 +205,7 @@
 						<string key="NSFrame">{{105, 39}, {200, 22}}</string>
 						<reference key="NSSuperview" ref="25853209"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="231012349"/>
+						<reference key="NSNextKeyView" ref="818003307"/>
 						<string key="NSReuseIdentifierKey">_NS:903</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="367438052">
@@ -245,14 +246,6 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">selectorField</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="30407622"/>
-					</object>
-					<int key="connectionID">139</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">view</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="25853209"/>
@@ -266,6 +259,14 @@
 						<reference key="destination" ref="231012349"/>
 					</object>
 					<int key="connectionID">141</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">selectorField</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="30407622"/>
+					</object>
+					<int key="connectionID">142</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -663,24 +664,27 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">141</int>
+			<int key="maxID">142</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">ConditionStatus</string>
 					<string key="superclassName">RSTrixiePlugin</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">statusMenu</string>
-						<string key="NS.object.0">NSPopUpButton</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">statusMenu</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="selectorField">NSTextField</string>
+						<string key="statusMenu">NSPopUpButton</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="selectorField">
+							<string key="name">selectorField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statusMenu">
 							<string key="name">statusMenu</string>
 							<string key="candidateClassName">NSPopUpButton</string>
 						</object>
-					</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/ConditionStatus.h</string>
@@ -697,25 +701,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">RSTrixiePlugin</string>
 					<string key="superclassName">NSViewController</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="name">NSString</string>
-						<string key="rules">NSMutableArray</string>
-						<string key="selectorField">NSTextField</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="name">
-							<string key="name">name</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">pluginName</string>
+						<string key="NS.object.0">NSString</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">pluginName</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">pluginName</string>
 							<string key="candidateClassName">NSString</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="rules">
-							<string key="name">rules</string>
-							<string key="candidateClassName">NSMutableArray</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="selectorField">
-							<string key="name">selectorField</string>
-							<string key="candidateClassName">NSTextField</string>
-						</object>
-					</dictionary>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/RSTrixiePlugin.h</string>
